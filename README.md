@@ -131,4 +131,4 @@ Or if u Already installed It it shows like :
 
 ## It Worked....
 
-## [Lets Move to Our Next Part i.e. Creating APPS for Our Project.](Django APPS.md)
+## **[Lets Move to Our Next Part i.e. Creating APPS for Our Project](Djangoapps.md)**
