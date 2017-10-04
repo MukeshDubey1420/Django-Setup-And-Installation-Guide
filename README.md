@@ -1,5 +1,5 @@
 ![Django Tutorial](django.jpg)
-# **Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.**
+### **Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.**
 
 * ## Django was designed to help developers take applications from concept to completion as quickly as possible.
 * ## Django takes security seriously and helps developers avoid many common security mistakes.
@@ -10,7 +10,7 @@
 #### 1. Install Django (obviously); and
 #### 2. Get a good understanding of the Model-View-Controller (MVC) design pattern.
 
-``The first, installing Django, is really simple and The second is just as important, especially if you are a new programmer or coming from using a programming language that does not clearly separate the data and logic behind your website from the way it is displayed .Because understanding MVC will make understanding Django so much easier.``
+#### ``The first, installing Django, is really simple and The second is just as important, especially if you are a new programmer or coming from using a programming language that does not clearly separate the data and logic behind your website from the way it is displayed .Because understanding MVC will make understanding Django so much easier.``
 
 
 ## Installing Django-->
