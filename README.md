@@ -37,9 +37,10 @@
 #### *Various Steps are there For Implementing Virtual Environment in our project:-
 
 * **Installing Virtual Environment(`pip install virtualenv`).**
-* **Connect our project with our Environment(create a directory with the same name as our virtual environment in our preferred development folder.)**
+* **Connect our project with our Environment(`virtualenv My_Project_Env` it creates a directory basically a folder with the name `My_Project_Env`. Make sure create this virtual environment Directory in our preferred development folder.)**
 * **Set Project Directory(bind our virtualenv with our current working directory.)**
-* **activate(activate this environment by moving into Virtual Environment Directory via cmd window, Inside the Script folder ,Run the activate command)**.
+* **activate(activate this environment by moving into Virtual Environment Directory via cmd window, Inside the Script folder ,Run the activate command For ex:-`C:\Users\user\Documents>My_Project_Env\Scripts\activate
+`)**.
 * **Deactivate(type ‘deactivate’ to deactivate your environment.)**
 #### `Note:-` Did Not Forget To configure ur python Interpretur To Virtual environment interpretur. You can set it by moving into settings option in your IDLE.
 
