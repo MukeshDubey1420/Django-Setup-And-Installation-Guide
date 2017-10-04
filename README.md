@@ -76,8 +76,7 @@ Or if u Already installed It it shows like :
 #### `django-admin startproject mysite`
 
 This command will automatically create a mysite directory in your project directory as well as all the necessary files for a basic.
-
-![Djangoproject1](djangoproject1.png)
+![Djangoproject](djangoproject1.png)
 
 ### Setting Up a Database-->
 
