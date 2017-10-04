@@ -66,4 +66,31 @@ Or if u Already installed It it shows like :
 
 This command will automatically create a mysite directory in your project directory as well as all the necessary files for a basic.
 
-![Djangoproject1](django project1.png)
+![Djangoproject1](djangoproject1.png)
+
+### Setting Up a Database-->
+
+#### Django includes a number of applications by default (For Example: The admin program and user management and authentication).
+#### Some of these applications make use of at least one database table, so we need to create tables in a database before we can use them. To do that, move into your Project Directory i.e. mysite folder created in the last step (type cd mysite at the command prompt) and run the following command:
+### `python manage.py migrate`
+
+#### The `migrate` command creates a `new SQLite database and any necessary database tables according to the settings file created by the startproject command` (more on the settings file later in the book). If all goes to plan, you’ll see a message for each migration it applies:
+![Migrations](migrate.png)
+
+### The Development Server-->
+
+#### Let’s verify your Django project works. Change into the outer mysite directory, if you haven’t already, and run the following commands:
+### `python manage.py runserver `
+#### You’ll see the following output on the command line:
+![Runserver](runserver.png)
+
+##### You’ve started the Django development server, a lightweight Web server written purely in Python. Django’s creators included this with Django so you can develop things rapidly, without having to deal with configuring a production server – such as Apache – until you’re ready for production.
+
+### Now’s a good time to note: `Don't use this server in anything resembling a production environment.` It’s intended only for use while developing.
+
+### Now that the server’s running, visit http://127.0.0.1:8000/ with your Web browser(On Local Host Port 8000, U will change the port According to ur need).
+
+## You’ll see a “Welcome to Django” page in pleasant, light-blue pastel
+![Welcome screen](welcome.png)
+
+## It Worked....
