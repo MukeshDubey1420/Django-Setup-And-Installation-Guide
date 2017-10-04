@@ -130,3 +130,5 @@ Or if u Already installed It it shows like :
 ![Welcome screen](welcome.png)
 
 ## It Worked....
+
+## [Lets Move to Our Next Part i.e. Creating APPS for Our Project.](Django APPS.md)
