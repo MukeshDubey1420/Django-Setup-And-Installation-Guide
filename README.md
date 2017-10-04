@@ -75,7 +75,8 @@ Or if u Already installed It it shows like :
 
 #### `django-admin startproject mysite`
 
-This command will automatically create a mysite directory in your project directory as well as all the necessary files for a basic.:
+**This command will automatically create a mysite directory in your project directory as well as all the necessary files for a basic.:**
+
 ![Django project](djangoproject1.png)
 
 ### Setting Up a Database-->
@@ -85,14 +86,16 @@ This command will automatically create a mysite directory in your project direct
 ### `python manage.py migrate`
 
 #### The migrate command looks at all your available models and creates tables in your database for whichever tables don’t already exist, as well as optionally providing much richer schema control.Or simply we can say that The `migrate` command creates a `new SQLite database and any necessary database tables according to the settings file created by the startproject command` (more on the settings file later in the book). If all goes to plan,
-you’ll see a message for each migration it applies:
+**you’ll see a message for each migration it applies:**
+
 ![Migrations](migrate.png)
 
 ### The Development Server-->
 
 #### Let’s verify your Django project works. Change into the outer mysite directory, if you haven’t already, and run the following commands:
 ### `python manage.py runserver `
-You’ll see the following output on the command line:
+**You’ll see the following output on the command line:**
+
 ![Runserver](runserver.png)
 
 ##### You’ve started the Django development server, a lightweight Web server written purely in Python. Django’s creators included this with Django so you can develop things rapidly, without having to deal with configuring a production server – such as Apache – until you’re ready for production.
