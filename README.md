@@ -39,34 +39,31 @@
 
 after that write some decription for name of virtualenv
 
-Installing Django
+## Installing Django
 
-Now that we have Python and are running a virtual environment, installing Django is super easy, just type the command:
+#### Now that we have Python and are running a virtual environment, installing Django is super easy, just type the command:
 
-pip install django
+### `pip install django`
 
-This will instruct pip to install Django into your virtual environment. Your command output should look like this:
+Note:- This will instruct pip to install Django into your virtual environment. Your command output should look like this:
+![pip install Django](pipinstalldjango.png)
 
-
-
-
-
-
+Or if u Already installed It it shows like :
+![pip install Django Already installed](alreadysatisfied.png)
 
 
 
 
+### Starting a Project-->
 
+#### Once you’ve installed Python, you can take the first step in developing a Django application by creating a project. *A project is a collection of settings for an instance of Django.* If this is your first time using Django, you’ll have to take care of some initial setup.
 
-Starting a Project
+#### `Remember:-I am assuming at this stage you are still running the virtual environment from the previous installation step. "If not, you will have to start it again with virtualenvFolder\Scripts\activate\."  Also make sure you are in the mysite_project directory.`
 
-Once you’ve installed Python, you can take the first step in developing a Django application by creating a project. A project is a collection of settings for an instance of Django. If this is your first time using Django, you’ll have to take care of some initial setup.
+### From your virtual environment command line, run the following command:
 
-Namely, you’ll need to auto-generate some code that establishes a Django project. The auto-generated code contains a collection of settings for an instance of Django, including database configuration, Django-specific options and application-specific settings.
+#### `django-admin startproject mysite`
 
-I am assuming at this stage you are still running the virtual environment from the previous installation step. If not, you will have to start it again with env_mysite\scripts\activate\. Also make sure you are in the mysite_project directory.
+This command will automatically create a mysite directory in your project directory as well as all the necessary files for a basic.
 
-From your virtual environment command line, run the following command:
-
-django-admin startproject mysite
-This command will automatically create a mysite directory in your project directory as well as all the necessary files for a basic, but fully functioning Django website.
+![Djangoproject1](django project1.png)
