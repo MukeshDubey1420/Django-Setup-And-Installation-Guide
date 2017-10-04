@@ -34,21 +34,36 @@
 
 ### *A Python virtual environment Rescues or solves this problem by wrapping all the dependencies and environment variables that your new software needs into a file system separate from the rest of the software on your computer.*
 
+#### *Various Steps are there For Implementing Virtual Environment in our project:-
+
+* **Installing Virtual Environment(`pip install virtualenv`).**
+* **Connect our project with our Environment(create a directory with the same name as our virtual environment in our preferred development folder.)**
+* **Set Project Directory(bind our virtualenv with our current working directory.)**
+* **activate(activate this environment by moving into Virtual Environment Directory via cmd window, Inside the Script folder ,Run the activate command)**.
+* **Deactivate(type ‘deactivate’ to deactivate your environment.)**
+#### `Note:-` Did Not Forget To configure ur python Interpretur To Virtual environment interpretur. You can set it by moving into settings option in your IDLE.
+
 #### **The virtual environment tool in Python is called ``virtualenv`` and we install it from the command line using pip:**
 
 #### `pip install virtualenv`
+**See The Output on Command Window :**
+![pip Virtual Environment](pipvirtualenv.png)
 
+**In Case You Already Installed :**
+![Already installed](pipvenv.png)
 
+### Create an Environment with virtualenv-->
+#### The next step is to create the environment with virtualenv:
+#### `virtualenv My_Project_Env`     
 
+its all depend upon u that what do u want to set the name of ur virtual environment.
+### Activating environment:
+```
+C:\Users\user\Documents>My_Project_Env\Scripts\activate
+(My_Project_Env) C:\Users\user\Documents>
 
-
-
-after that write some decription for name of virtualenv
-
-
-
-
-
+```
+#### Now install the packages and Libraries U wanna To use in your project Make sure before coding u must have to activate your virtual environment.and if u install a library without Activating the environment it will be installed it on ur system not on environment.So make sure to activate the environmentbefore installing the supportive library
 
 ## Installing Django
 
