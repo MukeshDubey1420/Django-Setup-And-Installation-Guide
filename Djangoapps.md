@@ -36,7 +36,7 @@
 ##### We haven't created any templates yet, but they will live in the `mysite/templates` folder.
 
 
-#### <---- Diffrence btw MVC and MVT ---->
+## <---- Diffrence btw MVC and MVT ---->
 
 ### In **MVT**, a request to a URL is dispatched to a View. This View calls into the Model, performs manipulations and prepares data for output. The data is passed to a Template that is rendered an emitted as a response. ideally in web frameworks, the controller is hidden from view.
 
