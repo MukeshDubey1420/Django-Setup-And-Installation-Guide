@@ -1,7 +1,11 @@
+## **Let's Have A Rough Idea That How Request Response Cycle Works In Django. How Request is Generated Via Client And how It returns data and template to the client.**
+
+**We will Discuss The Terminology used later On..**
+
+![Djangoworkflow](Djangoworkflow.jpeg)
+
 ### In this Part U will Learnt about How to connect Our APP With our project. And what is App And the Project in Django.
 * **I Hope that You Guys had Read the previous instructions carefully, Now we are moving to our next part i.e. Connecting the project with APP.**
-
-
 
 
 
