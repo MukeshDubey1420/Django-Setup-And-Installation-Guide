@@ -51,14 +51,30 @@ Next, we navigate to the DATABASE dictionary, which looks like this:
 ![Databases](Database.png)
 #### Now You have to **Change the following keys in the DATABASES** 'default' item to match your database connection settings:
 
-* #####  **ENGINE** : `'django.db.backends.mysql'`, (Either `'django.db.backends.sqlite3'`,  `'django.db.backends.postgresql'`, `'django.db.backends.mysql'`, or ``'django.db.backends.oracle'`` Depending Upon Your Choice.)
-* #### **NAME** : `'acadview_db'` (The name of your database. If you’re using SQLite, the database will be a file on your computer; in that case, NAME should be the full absolute path, including filename, of that file. The default value, `os.path.join(BASE_DIR, 'db.sqlite3')`, will store the file in your project directory.)
+* #####  **ENGINE** : `'django.db.backends.mysql'`,
+
+ * (Either `'django.db.backends.sqlite3'`,  `'django.db.backends.postgresql'`, `'django.db.backends.mysql'`, or ``'django.db.backends.oracle'`` Depending Upon Your Choice.)
+
+* #### **NAME** : `'acadview_db'`
+
+ * (The name of your database. If you’re using SQLite, the database will be a file on your computer; in that case, NAME should be the full absolute path, including filename, of that file. The default value, `os.path.join(BASE_DIR, 'db.sqlite3')`, will store the file in your project directory.)
 ##### **Note:-** If you are not using SQLite as your database, additional settings such as USER, PASSWORD, and HOST must be added.
 
-* #### **'USER'** : `'root'` (the name that you wrote while creating the connection.In case of mysql by default is is root.u can change if u wanna to change.)
-* #### **'PASSWORD'** : `'Your password here'` (the password you entered while creating the connection.**Must Remember**)
-* #### **'HOST'** : `'127.0.0.1'` or `'localhost'` (For testing on ur system.u can change it further)
-* #### **'PORT'** : `'3306'`  (Port for mysql database is by default set at 3306, there is no need to change it.)
+* #### **'USER'** : `'root'`
+
+ * (The name that you wrote while creating the connection.In case of mysql by default is is root.u can change if u wanna to change.)
+
+* #### **'PASSWORD'** : `'Your password here'`
+
+ * (The password you entered while creating the connection.**Must Remember**)
+
+* #### **'HOST'** : `'127.0.0.1'` or `'localhost'`
+
+ * (For testing on ur system.u can change it further)
+
+* #### **'PORT'** : `'3306'`
+
+ * (Port for mysql database is by default set at 3306, there is no need to change it.)
 
 ```
 
