@@ -48,14 +48,134 @@ Next, we navigate to the DATABASE dictionary, which looks like this:
 ![Databases](Database.png)
 #### Now You have to **Change the following keys in the DATABASES** 'default' item to match your database connection settings:
 
-* #####  **ENGINE** – Either `'django.db.backends.sqlite3'`,  `'django.db.backends.postgresql'`, `'django.db.backends.mysql'`, or ``'django.db.backends.oracle'`` Depending Upon Your Choice.
-* #### **NAME** – The name of your database. If you’re using SQLite, the database will be a file on your computer; in that case, NAME should be the full absolute path, including filename, of that file. The default value, `os.path.join(BASE_DIR, 'db.sqlite3')`, will store the file in your project directory.
+* #####  **ENGINE** : `'django.db.backends.mysql'`, (Either `'django.db.backends.sqlite3'`,  `'django.db.backends.postgresql'`, `'django.db.backends.mysql'`, or ``'django.db.backends.oracle'`` Depending Upon Your Choice.)
+* #### **NAME** : `'acadview_db'` (The name of your database. If you’re using SQLite, the database will be a file on your computer; in that case, NAME should be the full absolute path, including filename, of that file. The default value, `os.path.join(BASE_DIR, 'db.sqlite3')`, will store the file in your project directory.)
 ##### **Note:-** If you are not using SQLite as your database, additional settings such as USER, PASSWORD, and HOST must be added.
 
+* #### **'USER'** : `'root'` (the name that you wrote while creating the connection.In case of mysql by default is is root.u can change if u wanna to change.)
+* #### **'PASSWORD'** : `'Your password here'` (the password you entered while creating the connection.**Must Remember**)
+* #### **'HOST'** : `'127.0.0.1'` or `'localhost'` (For testing on ur system.u can change it further)
+* #### **'PORT'** : `'3306'`  (Port for mysql database is by default set at 3306, there is no need to change it.)
+
+```
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'acadview_db',
+        'USER': 'root',
+        'PASSWORD': 'your password here',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
+```
 
 #### [MySQL-Django configuration for Windows...Check here..](https://docs.google.com/document/d/1tUnpcf_u40-XZdnjNjCPpkvV_8UvLkJ9QW8mcGwRvAY/edit)
 
+### Creating Models (i.e. Creating DataTable or simply model is just another word for a database table.)
+In MySQL you can create a model/table using the basic DDL queries. This is how you do it.
+To create a table we do:
+```
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+```
+This requires that we understand another whole new set of syntax, which will depend on which type of database we choose.
 
+###      Django to the rescue!!
+![Django to the rescue!!](Django.gif)
+
+* It provides us a much easier way to make and maintain models: migrations.
+* Django migrations help you manage any sort of change in your database tables/models.
+
+These changes Are ?
+* Creating a table
+* Adding/Removing a column from the table
+* Updating table/column name
+* Removing a table/column
+
+In Django, each model is a Python class. Each attribute of the model class represents a column in the database table.
+For this, we open `models.py` from the polls directory.
+
+Let's make the User model/class in `models.py` file :
+
+```
+from django.db import models
+
+    class User(models.Model):
+      name = models.CharField(max_length=255)
+      phone = models.CharField(max_length=30)
+      age = models.IntegerField(default=0)
+      has_verified_mobile = models.BooleanField(default=False)
+      created_on = models.DateTimeField(auto_now_add=True)
+```
+* For it to be a valid django model class it needs to inherit from `models.Model class` which is included in django. i.e. `from django.db import models`
+
+* The models class has already defined some commonly used data or field types. For name we will be using the `CharField`.
+
+* Here we want our name attribute or column to not have more than 255 characters, we specify that using max_length parameter. We can also add a integer type field for age of user.
+
+* Django ORM provides us the IntegerField.
+
+* We added a default value for age to be 0 for all users in case the user does not provide for it.
+We can also add a date time field for when the user created the account.Django ORM provides us with the DateTimeField.
+
+Setting auto_now_add attribute to True tells django whether it should automatically add a date of the current time when a new user is created or it.
+
+[You Guys Can also check Django model fields by clicking here....](https://docs.djangoproject.com/en/1.11/ref/models/fields/)
+
+### Migrate the Database and Test your Project
+We just created the python class And the Django settings are configured, but the database table hasn't been created till now. Now that we can migrate our data structures to our database and test out the server.
+
+We can begin by applying migrations to our database.
+
+To create migrations we just need to run the following command:
+
+`python manage.py makemigrations polls`
+
+This is what makemigrations command did for us, all by itself:
+
+![migrations](migrations.png)
+
+Note :- Django automatically adds primary key to the models that we create if we haven't mentioned it.
+By running `makemigrations`, **you’re telling Django that you’ve made some changes to your models and that you’d like the changes to be stored as a migration**.
+
+Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk.
+
+**The changes have only been recorded but the database hasn't been modified till now**. We need to run `migrate` to actually create those model tables in your database:
+`python manage.py migrate`
+
+```
+python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, polls, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying polls.0001_initial... OK
+
+```
+Now whenever you are updating ur database by performing CRUD (create, read, update , delete) operations everytime you have to follow the steps.
+* Change your models (in models.py).
+* Run `python manage.py makemigrations polls` to create migrations for those changes
+* Run `python manage.py migrate` to apply those changes to the database.
+
+The reason that there are separate commands to make and apply migrations is because you’ll commit migrations to your version control system and ship them with your app; they not only make your development easier, they’re also useable by other developers and in production.
+
+
+
+
+
+
+
+
+
+
+### Migrate the Database and Test your Project-->
 
 
 
