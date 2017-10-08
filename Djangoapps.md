@@ -15,11 +15,13 @@
 ### To create an APP we have to write `python manage.py startapp polls`in our cmd window, Here startapp plays the same role as startproject plays in case of creating the name of our project
 #### `python manage.py startapp polls`
  **The output will be like this :--**
+
  ![apps](Apps.png)
 
 ### Configuring our APP with Django Project In Settings.py File.
 
 #### To include the APP in our project, we need to add a reference to its configuration class in the `INSTALLED_APPS` setting. For this we have to Edit the `mysite/settings.py` file and add that APP to the INSTALLED_APPS setting. It’ll look like this:
+
 ```
 mysite/settings.py
 INSTALLED_APPS = [
@@ -45,6 +47,7 @@ Note:- Donot forget to place ' , ' comma After adding the app Name i.e. `polls.`
 
 To do this, we open the settings.py file in mysite directory.
 Next, we navigate to the DATABASE dictionary, which looks like this:
+
 ![Databases](Database.png)
 #### Now You have to **Change the following keys in the DATABASES** 'default' item to match your database connection settings:
 
