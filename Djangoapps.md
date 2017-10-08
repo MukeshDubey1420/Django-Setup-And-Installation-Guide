@@ -74,6 +74,20 @@ DATABASES = {
 
 #### [MySQL-Django configuration for Windows...Check here..](https://docs.google.com/document/d/1tUnpcf_u40-XZdnjNjCPpkvV_8UvLkJ9QW8mcGwRvAY/edit)
 
+### Django Preinstalled APPS.
+```
+By default, INSTALLED_APPS contains the following apps, all of which come with Django:
+
+django.contrib.admin – The admin site. we will use it shortly.
+django.contrib.auth – An authentication system.
+django.contrib.contenttypes – A framework for content types.
+django.contrib.sessions – A session framework.
+django.contrib.messages – A messaging framework.
+django.contrib.staticfiles – A framework for managing static files.
+
+These applications are included by default as a convenience for the common case.
+
+```
 ### Edit Settings
 Since we’ve generated the skeleton project, we now have a `settings.py` file.
 
@@ -82,10 +96,6 @@ Now navigate to the directory where the `settings.py` file is located, open and 
 We are editing the TIME_ZONE field, so navigate to the bottom section of the file that looks like this:
 
 ```
-                       settings.py
-
-
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Kolkata'
@@ -97,6 +107,30 @@ USE_L10N = True
 USE_TZ = True
 
 ```
+The files that get served from your Django web application are referred to as static files. This could include any necessary files to render the complete web page, including JavaScript, CSS, and images.
+
+Go to the end of the settings.py file and add `STATIC_ROOT` as shown below:
+settings.py
+```
+# Static files (CSS, JavaScript, Images)
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+```
+Now that we’ve added the time zone and the path for static files.
+
+**its optional to  add our IP to the list of allowed hosts. Navigate to the line of the settings.py file where it says ALLOWED_HOSTS, it’ll be towards the top of the settings.py file.**
+```
+...
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['your server IP address']
+
+
+```
+its your choice  you can simply leave it empty.Or Add your server’s IP address between the square brackets and single quotes.
 ### Creating Models (i.e. Creating DataTable or simply model is just another word for a database table.)
 In MySQL you can create a model/table using the basic DDL queries. This is how you do it.
 To create a table we do:
