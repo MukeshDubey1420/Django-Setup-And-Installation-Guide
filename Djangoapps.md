@@ -74,6 +74,29 @@ DATABASES = {
 
 #### [MySQL-Django configuration for Windows...Check here..](https://docs.google.com/document/d/1tUnpcf_u40-XZdnjNjCPpkvV_8UvLkJ9QW8mcGwRvAY/edit)
 
+### Edit Settings
+Since we’ve generated the skeleton project, we now have a `settings.py` file.
+
+**In order for our project(Application) to have the correct time associated with our area, we will edit the** `settings.py` **file so that it will be using your current time zone**. You can use [this list of time zones as a reference....](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) For our example, we will be using `Asia/Kolkata` time.
+Now navigate to the directory where the `settings.py` file is located, open and edit the settings.py file:
+We are editing the TIME_ZONE field, so navigate to the bottom section of the file that looks like this:
+
+```
+                       settings.py
+
+
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'Asia/Kolkata'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
+
+```
 ### Creating Models (i.e. Creating DataTable or simply model is just another word for a database table.)
 In MySQL you can create a model/table using the basic DDL queries. This is how you do it.
 To create a table we do:
@@ -166,16 +189,44 @@ Now whenever you are updating ur database by performing CRUD (create, read, upda
 
 The reason that there are separate commands to make and apply migrations is because you’ll commit migrations to your version control system and ship them with your app; they not only make your development easier, they’re also useable by other developers and in production.
 
+### What is Django ORM ??
+An object-relational mapper (ORM) is a code library that automates the transfer of data stored in relational databases tables into objects that are more commonly used in application code.
+ORMs provide a high-level abstraction upon a relational database that allows a developer to write Python code instead of SQL to create, read, update and delete data and schemas in their database. Developers can use the programming language they are comfortable with to work with a database instead of writing SQL statements or stored procedures.
+
+### Introducing the Django Admin
+After creating the database structure, we can create an administrative account by typing:
+`python manage.py createsuperuser`
+You will be asked to select a username, provide an email address, and choose and confirm a password for the account.
+
+Enter your desired username and press enter.
+`Username: admin`
+You will then be prompted for your desired email address:
+`Email address: admin@example.com`
+The final step is to enter your password. You will be asked to enter your password twice, the second time as a confirmation of the first.
+`Password: **********`
+`Password (again): *********`
+
+Superuser created successfully.
+### Start the development server:
+The Django admin site is activated by default.Once you have an admin account set up, you can test that your database is performing correctly by starting up the Django development server:
+`python manage.py runserver`
+In your web browser, visit your server's domain name or IP address followed by :8000 to reach default Django root page.You should see the default index page:
+![Welcome page](welcome.png)
+
+Now, Append `/admin` to the end of the URL and you should be able to access the login screen to the admin interface: http://127.0.0.1:8000/admin/. You should see the admin’s login screen:
+
+![Adminpanel](admin.png)
+
+### Enter to the admin site
+Now, try logging in with the `superuser` account you created in the previous step. You should see the Django admin index page:
+
+![Adminpanel2](admin1.png)
 
 
+You should see a few types of editable content: groups and users. They are provided by `django.contrib.auth`, the authentication framework shipped by Django.
+By accessing the admin interface, we have confirmed that our database has stored our user account information and that it can be appropriately accessed.
 
 
-
-
-
-
-
-### Migrate the Database and Test your Project-->
 
 
 
