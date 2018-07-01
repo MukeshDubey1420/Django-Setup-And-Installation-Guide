@@ -301,7 +301,11 @@ By accessing the admin interface, we have confirmed that our database has stored
 
 ##### **[To get more information regarding Urls in Django Visit here.....](https://www.tutorialspoint.com/django/django_url_mapping.htm)**
 
-#### <--- What is MVC/MVT Model Architecture in Django ---> ??  [Check this for more info....](https://djangobook.com/model-view-controller-design-pattern/)
+
+
+
+ **-----What is MVC/MVT Model Architecture in Django----- ??**  
+ [Check this for more info....](https://djangobook.com/model-view-controller-design-pattern/)
 
 * Broadly, Django Follows  `MVC (Model View Controller) architecture` closely enough to be called an MVC framework. *Django has been referred to as an MTV framework because the controller is handled by the framework itself and most of the excitement happens in models, templates and views.* However, Django calls these pieces by different names. The four pieces to understand for Django are:--> *URL patterns, views, models, and templates.*. Each of these pieces has a separate role.
 
@@ -314,7 +318,7 @@ By accessing the admin interface, we have confirmed that our database has stored
 ##### We haven't created any templates yet, but they will live in the `mysite/templates` folder.
 
 
-### <---- Diffrence btw MVC and MVT ---->
+### ------- Diffrence btw MVC and MVT -------
 
 * In **MVT**, a request to a URL is dispatched to a View. This View calls into the Model, performs manipulations and prepares data for output. The data is passed to a Template that is rendered an emitted as a response. ideally in web frameworks, the controller is hidden from view.
 
