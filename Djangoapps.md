@@ -6,7 +6,9 @@
 
 ![Djangoworkflow](Djangoworkflow.jpeg)
 
-##               <-------Workflow Explanation --------->
+##     **-------Workflow Explanation--------**
+
+
 ##### It all starts with a request. The request reaches to the controller(The  controller is responsible for grabbing all of the necessary building blocks and organizing them as necessary.)Those building blocks are known as models.(models help the controller to retrieve all of the information it needs from the database.) So the request comes in the form of Response to the Client.The final product is known as the view.(Complete code i.e Template + Data).The view is the final page the user sees in their browser.
 
 ### Creating the APP
@@ -25,16 +27,16 @@
 ```
 mysite/settings.py
 INSTALLED_APPS = [
-    'polls',
-    'django.contrib.admin',
-    'django.contrib.auth',
+    'polls',  # Registering Our App here in Installed Apps List of settings.py
+    'django.contrib.admin',  # Provides Django SAdmin Panel
+    'django.contrib.auth', # Provides Authentication to the user and admin.
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
+    'django.contrib.sessions', # Manages the Session for Login/LogOut..
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',  # Manages Static Files (Templates ,css ,js)
 ]
 ```
-Note:- Donot forget to place ' , ' comma After adding the app Name i.e. `polls.`
+Note:- Donot forget to place ' , ' comma After adding the app Name i.e. `polls.` (Comments are used for your understanding. Must be removed..)
 
 
 

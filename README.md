@@ -16,7 +16,7 @@
 
 ##### Django follows the MVC pattern closely,  Django is often referred to as an MTV framework. In the MTV development pattern:
 
-* IN MVC Pattern ,When talking about applications that provides UI (web or desktop), we usually talk about MVC architecture. And as the name suggests, MVC pattern is based on three components: Model  (Data that represent the system), View ( Presentation of the data), and Controller (The intelligence and interface between Model and View1, this could be the affected by user input, default state of the application, etc.).
+* IN MVC Pattern ,When talking about applications that provides UI (web or desktop), we usually talk about MVC architecture. And as the name suggests, MVC pattern is based on three components: Model  (Data that represent the system), View ( Presentation of the data), and Controller (The intelligence and interface between Model and View1, this could be the affected by user input, default state of the application, etc).
 
 * Whereas in MTV Pattren, The Model-View-Template (MVT) is slightly different from MVC. In fact the **main difference between the two patterns is that Django itself takes care of the Controller part (Software Code that controls the interactions between the Model and View), leaving us with the template.** The template is a HTML file mixed with Django , called as Django Template Language (DTL). M = Model (Data that represent the system), V = View ( Specifically the view functions, the intelligence and interface between the Model and Template.  Similar to the concept of "view" from SQL space.), T = Template ( a Django Template which provide facility to present data)
 
@@ -30,9 +30,11 @@
 
 ##### Before you can start learning how to use Django, you must have to setup the following needs.
 
- 1. Install Python.(Ignore it if already installed.)
- 2. Install a Python Virtual Environment.(Optional but still U have to Prefer it for better convinience.And To prevent from Conflicts.)
- 3. Install Django.(Compulsary)
+ 1. Install Python. ( **Django is written in 100% pure Python code, so you'll need to install Python on your system.** Latest Django version requires Python 2.6.5 or higher Version ,Ignore it if already installed.)
+
+ 2. Install a Python Virtual Environment. (**Optional but still U have to Prefer it for better convinience.And To prevent from Conflicts.**)
+
+ 3. Install Django.(**Compulsary**)
 
 ### Installing Python-->
 
@@ -97,8 +99,6 @@ Note:- This will instruct pip to install Django into your virtual environment. Y
 Or if u Already installed It it shows like :
 
 ![pip install Django Already installed](alreadysatisfied.png)
-
-
 
 
 ### Starting a Project-->
