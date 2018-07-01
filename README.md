@@ -16,14 +16,15 @@
 
 ##### Django follows the MVC pattern closely,  Django is often referred to as an MTV framework. In the MTV development pattern:
 
-* IN MVC Pattern ,When talking about applications that provides UI (web or desktop), we usually talk about MVC architecture. And as the name suggests, MVC pattern is based on three components: Model, View, and Controller.
+* IN MVC Pattern ,When talking about applications that provides UI (web or desktop), we usually talk about MVC architecture. And as the name suggests, MVC pattern is based on three components: Model  (Data that represent the system), View ( Presentation of the data), and Controller (The intelligence and interface between Model and View1, this could be the affected by user input, default state of the application, etc.).
 
-* Whereas in MTV Pattren, The Model-View-Template (MVT) is slightly different from MVC. In fact the **main difference between the two patterns is that Django itself takes care of the Controller part (Software Code that controls the interactions between the Model and View), leaving us with the template.** The template is a HTML file mixed with Django , called as Django Template Language (DTL).
+* Whereas in MTV Pattren, The Model-View-Template (MVT) is slightly different from MVC. In fact the **main difference between the two patterns is that Django itself takes care of the Controller part (Software Code that controls the interactions between the Model and View), leaving us with the template.** The template is a HTML file mixed with Django , called as Django Template Language (DTL). M = Model (Data that represent the system), V = View ( Specifically the view functions, the intelligence and interface between the Model and Template.  Similar to the concept of "view" from SQL space.), T = Template ( a Django Template which provide facility to present data)
 
 ##### The following diagram illustrates how each of the components of the MVT pattern interacts with each other to serve a user request −
 
 ![DjangoMVTPattern](django_pattern.jpg)
 
+** The developer Just provides the Model, the view and the template then just maps it to a URL and Django does the magic to serve it to the user.**
 
 ### **Installing The Django Framework**-->
 
