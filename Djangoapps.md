@@ -44,8 +44,19 @@ Note:- Donot forget to place ' , ' comma After adding the app Name i.e. `polls.`
 
 * By default, the django configuration uses SQLite. If you’re new to databases, or you’re just interested in trying Django, this is the easiest choice. SQLite is included in Python, so you won’t need to install anything else to support your database.
 * When starting your first real project, however, you may want to use a more scalable database like `PostgreSQL`, `MySql` to avoid database-switching headaches down the road.
+Django supports several major database engines and you can set up any of them based on your comfort.
+
+[MySQL](http://www.mysql.com/),
+[PostgreSQL](http://www.postgresql.org/),
+[SQLite3](http://www.sqlite.org/),
+[Oracle](http://www.oracle.com/),
+[MongoDb](https://django-mongodb-engine.readthedocs.org),
+[GoogleAppEngine Datastore](https://cloud.google.com/appengine/articles/django-nonrel),..You can refer to respective documentation to installing and configuring a database of your choice.
 ##### [Installation Guide For Installing MySql For Windows ..Click Here..](https://github.com/avmain/Acadview-Docs/blob/master/docs/How%20to%20install%20MySQL%20in%20Windows.md)
 ##### [Installation Guide For Installing PostgreSQL For Windows ..Click Here..](https://drive.google.com/file/d/0B6G-YjcSmDxeWkdGUjBDTGwxRzg/view?ths=true)
+
+
+
 
 To do this, we open the settings.py file in mysite directory.
 Next, we navigate to the DATABASE dictionary, which looks like this:
