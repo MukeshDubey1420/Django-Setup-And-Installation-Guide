@@ -24,7 +24,7 @@
 
 ![DjangoMVTPattern](django_pattern.jpg)
 
-** The developer Just provides the Model, the view and the template then just maps it to a URL and Django does the magic to serve it to the user.**
+**The developer Just provides the Model, the view and the template then just maps it to a URL and Django does the magic to serve it to the user.**
 
 ### **Installing The Django Framework**-->
 
