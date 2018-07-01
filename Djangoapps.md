@@ -101,12 +101,12 @@ DATABASES = {
 ```
 By default, INSTALLED_APPS contains the following apps, all of which come with Django:
 
-django.contrib.admin – The admin site. we will use it shortly.
+django.contrib.admin – The admin site. we will use it shortly(Provides ADMIN Panel).
 django.contrib.auth – An authentication system.
 django.contrib.contenttypes – A framework for content types.
-django.contrib.sessions – A session framework.
+django.contrib.sessions – A session framework..
 django.contrib.messages – A messaging framework.
-django.contrib.staticfiles – A framework for managing static files.
+django.contrib.staticfiles – A framework for managing static files(HTML,CSS,JS).
 
 These applications are included by default as a convenience for the common case.
 
@@ -154,7 +154,11 @@ ALLOWED_HOSTS = ['your server IP address']
 
 ```
 its your choice  you can simply leave it empty.Or Add your server’s IP address between the square brackets and single quotes.
-### Creating Models (i.e. Creating DataTable or simply model is just another word for a database table.)
+
+**NOTE : - SECURITY WARNING: don't run Your Project with debug turned (DEBUG = True) on in production! Means if you are in development You can use DEBUG= True to find out bugs and errors, but when you are Launching your product make sure you Set DEBUG = False**
+
+
+#### Creating Models (i.e. Creating DataTable or simply model is just another word for a database table.)
 In MySQL you can create a model/table using the basic DDL queries. This is how you do it.
 To create a table we do:
 ```
@@ -167,7 +171,7 @@ CREATE TABLE table_name (
 ```
 This requires that we understand another whole new set of syntax, which will depend on which type of database we choose.
 
-###      Django to the rescue!!
+###      Django to the rescue!! (Basic Knowledge of Data Base is Enough , Rest Django ORM will take care of each and everything..)
 ![Django to the rescue!!](Django.gif)
 
 * It provides us a much easier way to make and maintain models: migrations.
