@@ -14,15 +14,30 @@
 ### Creating the APP
 
 * Here same case for naming, we can choose any name for our app, For example in case of project my project name is mysite, lets say here i am using the name of my APP is polls.
- * To create an APP we have to write `python manage.py startapp polls`in our cmd window, Here startapp plays the same role as startproject plays in case of creating the name of our project
+ * To create an APP ,We assume you are in your project folder. In our main `“mysite”` folder, the same folder then manage.py − we have to write `python manage.py startapp polls`in our cmd window, Here `startapp`  plays the same role as `startproject` plays in case of creating the name of our project
 ##### `python manage.py startapp polls`
+
  **The output will be like this :--**
 
  ![apps](Apps.png)
 
-### Configuring our APP with Django Project In Settings.py File.
 
- * To include the APP in our project, we need to add a reference to its configuration class in the `INSTALLED_APPS` setting. For this we have to Edit the `mysite/settings.py` file and add that APP to the INSTALLED_APPS setting. It’ll look like this:
+ ### Application Structure --
+
+ * `__init__.py` − Just to make sure python handles this folder as a package.
+
+ * `admin.py` − This file helps you make the app modifiable in the admin interface.
+
+ * `models.py` − This is where all the application models(Data) are stored.
+
+* `tests.py` − This is where your unit tests are.
+
+* `views.py` − This is where your application views are.
+
+
+### Configuring our APP with Django Project In `Settings.py` File. (Get the Project to Know About Your Application)
+
+* At this stage we have our `"polls"` application, now we need to register it with our Django project `"mysite"`. To do so, update INSTALLED_APPS in the settings.py file of your project (add your app name) −MEANS To include the APP in our project, we need to add a reference to its configuration class in the `INSTALLED_APPS` setting. For this we have to Edit the `mysite/settings.py` file and add that APP to the INSTALLED_APPS setting. It’ll look like this:
 
 ```
 mysite/settings.py
